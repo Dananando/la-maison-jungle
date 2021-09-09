@@ -2,6 +2,8 @@
 import '../useless/App.css';
 import Banner from './Banner';
 import Cart from './Cart';
+import ShoppingList from './ShoppingList';
+
 import React from 'react';
 
 function App() {
@@ -9,6 +11,7 @@ function App() {
     <React.Fragment>
       <Banner />
       <Cart />
+      <ShoppingList />
     </React.Fragment>
   );
 }

@@ -9,6 +9,7 @@ const Cart = () => {
         bouquetDeFleurs: 15
     };
     return (<div className='lmj-cart'>
+        <h2>Panier</h2>
         <ul>
             <li>Monstera : {price.monstera}€</li>
             <li>Lierre : {price.lierre}€</li>
