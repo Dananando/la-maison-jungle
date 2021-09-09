@@ -1,3 +1,5 @@
+import '../styles/Cart.css';
+
 const Cart = () => {
     const reducer = (accumulator, currentValue) => accumulator + currentValue;
 
@@ -6,7 +8,7 @@ const Cart = () => {
         lierre: 10,
         bouquetDeFleurs: 15
     };
-    return (<div>
+    return (<div className='lmj-cart'>
         <ul>
             <li>Monstera : {price.monstera}€</li>
             <li>Lierre : {price.lierre}€</li>
