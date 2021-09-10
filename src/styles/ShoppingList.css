@@ -19,6 +19,19 @@
 	position: relative;
 }
 
+.lmj-plant-sub-item {
+	/* border: solid 2px black; */
+	/* border-radius: 10px; */
+	height: 150px;
+	width: 150px;
+	/* margin: 10px; */
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: row;
+	position: relative;
+}
+
 .lmj-sales {
 	position: absolute;
 	right: 0px;
