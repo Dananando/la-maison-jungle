@@ -13,9 +13,9 @@ const CareScale = (props) => {
     }
 
     return (
-        range.map((rangeValue) => {
+        range.map((rangeValue, index) => {
             if(scaleValue >= rangeValue) {
-                return (<span key={rangeValue.toString()}>{scaleType}</span>);
+                return (<span key={`${rangeValue.toString()}-${scaleValue}-${index}`}>{scaleType}</span>);
             }
             return null;
         })

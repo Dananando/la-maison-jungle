@@ -5,17 +5,23 @@ import CareScale from '../components/CareScale';
 
 const PlantList = () => {
     return (<ul className='lmj-plant-list'>
-        {plantList.map((plant) => {
+        {plantList.map((plant, index) => {
             return (
                 <React.Fragment>
                     <li className='lmj-plant-item' key={plant.id}>
-                        <div className='lmj-plant-sub-item' >{plant.name}</div>
-                        <div className='lmj-plant-sub-item' >
-                            {plant.isBestSale && <span className='lmj-plant-sub-item' >🔥</span>}
+                        <div key={`${plant.name}`}>
+                            {plant.name}
                         </div>
-                        <div className='lmj-plant-sub-item' ><CareScale careType='water' scaleValue={plant.water} /></div>
-                        <div className='lmj-plant-sub-item' ><CareScale careType='light' scaleValue={plant.light} /></div>                      
-                        {plant.isSpecialOffer && <div className='lmj-sales'>Soldes</div>}
+                        <div key={`${plant.name}-${plant.id}`} className='lmj-plant-sub-item'>
+                            {plant.isBestSale && <span className='lmj-plant-sub-item'>🔥</span>}
+                        </div>
+                        <div key={`${plant.name}-${plant.id}-${index}`} className='lmj-plant-sub-item' >
+                            <CareScale careType='water' scaleValue={plant.water} />
+                        </div>
+                        <div key={`${plant.id}-${index}-${plant.name}`} className='lmj-plant-sub-item' >
+                            <CareScale careType='light' scaleValue={plant.light} />
+                        </div>
+                        {plant.isSpecialOffer && <div key={`$${index}-{plant.id}-${plant.name}`} className='lmj-sales'>Soldes</div>}
                     </li>
                 </React.Fragment>
             );
