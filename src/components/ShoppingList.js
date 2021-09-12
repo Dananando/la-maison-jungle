@@ -9,7 +9,9 @@ const ShoppingList = () => {
             <CategoryList />
 
             <h2>Ma liste</h2>
-            <PlantList />
+            <ul className='lmj-plant-list'>
+                <PlantList />
+            </ul>
 
         </React.Fragment>
     )
